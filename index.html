@@ -6,68 +6,89 @@
     <title>Portfolio | Your Name here</title>
 
     <!-- ! Apply fonts imported from Google Fonts -->
-    <!-- Insert code here -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
     <!-- ! Internat styes -->
     <style>
-        /* insert styles here */
+      /* insert styles here */
+      :root { --bg:#fff; --text:#1f2937; --muted:#6b7280; --bar:#111827; --accent:#2563eb; }
+      * { box-sizing: border-box; }
+      body { margin:0; font-family: Inter, Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+      /* Keep your separate nav elements; just make the links visible */
+      nav { background: var(--bar); padding: 10px 14px; }
+      nav a { color:#fff; text-decoration:none; margin-right:8px; }
+      nav a:hover { color: var(--accent); }
+
+      section { padding: 32px 16px; max-width: 900px; margin: 0 auto; }
+      #landing { background:#f3f4f6; border-radius: 8px; }
+      h1, h2 { margin:0 0 10px; }
+      p { margin:0 0 10px; color:var(--muted); }
+      footer { text-align:center; padding:20px 16px; background:#111827; color:#d1d5db; }
+      .divider { height:1px; background:#e5e7eb; margin:20px 0; }
+      .cta { display:inline-block; padding:8px 14px; background:var(--accent); color:#fff; text-decoration:none; border-radius:6px; font-size:14px; }
     </style>
   </head>
 
   <body>
     <!-- ! Start of nav (Main Navigation) -->
-    <nav> <a href="landing">|</a>
-</nav>
-    <nav> <a href="about">|</a>
-</nav>
-    <nav> <a href="experience">|</a>
-</nav>
-    <nav> <a href="projects">|</a>
-</nav>
-    <nav> <a href="contracts">|</a>
-</nav>
-<!-- Insert HTML syntax here -->
-        <!-- ! End of nav (Main Navigation) -->
+    <nav> <a href="#landing">|</a> </nav>
+    <nav> <a href="#about">|</a> </nav>
+    <nav> <a href="#experience">|</a> </nav>
+    <nav> <a href="#projects">|</a> </nav>
+    <nav> <a href="#contracts">|</a> </nav>
+    <!-- ! End of nav (Main Navigation) -->
+
     <!-- ! Start of Landing section -->
-     <section>
-        <div> 
-            Name and Designation
-
-
-            <p>hello i &apos;</p>
-
-        <div
-<h1> danial 
-
-<h1>
-
-    <P> full stack developer  </P>
-    <!-- <!div> call to action </div> -->
-
-
-</h1>
-     </section>
-        <!-- Insert HTML syntax here -->
+    <section id="landing">
+      <div>
+        <h1>Danial</h1>
+        <p>Full stack developer</p>
+        <div class="divider"></div>
+        <p>hello i &apos;</p>
+        <!-- call to action -->
+        <a class="cta" href="#projects">View Projects</a>
+      </div>
+    </section>
     <!-- ! End of Landing section -->
 
     <!-- ! Start of About Me section -->
-        <!-- Insert HTML syntax here -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p> SOFTWARE DEVELOPER </p>
+    </section>
     <!-- ! End of About Me section -->
 
     <!-- ! Start of Experience section -->
-        <!-- Insert HTML syntax here -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Banking</p>
+    </section>
     <!-- ! End of Experience section -->
 
     <!-- ! Start of Projects section -->
-        <!-- Insert HTML syntax here -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>List a few projects and what you built.</p>
+    </section>
     <!-- ! End of Projects section -->
 
-    <!-- ! Start of Contact section -->
-        <!-- Insert HTML syntax here -->
+    <!-- ! Start of Contact(s) section -->
+    <section id="contracts">
+      <h2>Contracts</h2>
+      <p>Optional: describe freelance/contract work here.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
     <!-- ! End of Contact section -->
 
     <!-- ! Start of Footer -->
-        <!-- Insert HTML syntax here -->
+    <footer>
+      © 2025 Your Name — All rights reserved.
+    </footer>
     <!-- ! End of Footer -->
   </body>
 </html>
+    
