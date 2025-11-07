@@ -3,92 +3,259 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Your Name here</title>
+    <title>Portfolio | Danial</title>
 
     <!-- ! Apply fonts imported from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- ! Internat styes -->
+    <!-- ! Internal styes -->
     <style>
-      /* insert styles here */
-      :root { --bg:#fff; --text:#1f2937; --muted:#6b7280; --bar:#111827; --accent:#2563eb; }
-      * { box-sizing: border-box; }
-      body { margin:0; font-family: Inter, Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
-      /* Keep your separate nav elements; just make the links visible */
-      nav { background: var(--bar); padding: 10px 14px; }
-      nav a { color:#fff; text-decoration:none; margin-right:8px; }
-      nav a:hover { color: var(--accent); }
+      /* CSS variables for easy theme management */
+      :root{
+        --primary-color: #1a1a1a;
+        --secondary-color: #6c757d;
+        --accent-color: #4caf50; /* touch of green accents */
+        --light-bg-color: #f8f9fa;
+        --white: #fff; /* #fff === #ffffff */
+        --border-radius: 0.5rem; /* 8px border radius */
+        --transition-speed: 0.3s;
+        font-size: 100%; /* Default size = 16px === 1rem === 100% */
+      }
 
-      section { padding: 32px 16px; max-width: 900px; margin: 0 auto; }
-      #landing { background:#f3f4f6; border-radius: 8px; }
-      h1, h2 { margin:0 0 10px; }
-      p { margin:0 0 10px; color:var(--muted); }
-      footer { text-align:center; padding:20px 16px; background:#111827; color:#d1d5db; }
-      .divider { height:1px; background:#e5e7eb; margin:20px 0; }
-      .cta { display:inline-block; padding:8px 14px; background:var(--accent); color:#fff; text-decoration:none; border-radius:6px; font-size:14px; }
+      /* Base styling & Font Application */
+      /* Reset All elements on the web page */
+      *{
+        box-sizing: border-box;
+        margin: 10;
+        padding: 0;
+      }
+
+      body{
+        font-family: "Lato", sans-serif;
+        line-height: 1.6;
+        color: var(--primary-color);
+        background-color: var(--white);
+        scroll-behavior: smooth;
+      }
+
+      /* Reusable component */
+      /* Class selector */
+      .section-padding{
+        padding: 5rem 1.25rem; /* 80px 20px */
+        max-width: 75rem; /* Converts to 1200px */
+        margin: 0 auto; /* top & bottom = 0px, left and right = flushed */
+      }
+
+      /* Tag selector, targetting h2 */
+      h2{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3.75rem;
+        color: var(--primary-color);
+      }
+
+      /* Navigation */
+      nav{
+        display: flex;
+        justify-content: center;    /* horizontal alignment */
+        align-items: center;        /* vertical alignment */
+        padding: 0.9375rem 1.25rem; /* Top, Bottom = 15px, Left, Right = 20px */
+        background-color: var(--white);
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      /* Descendent Selector */
+      nav a{
+        margin: 0 0.9375rem;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        transition: color var(--transition-speed);
+      }
+
+      nav a:hover{
+        color: var(--accent-color);
+      }
+
+      /* 1. Landing Section */
+      /* ID selector */
+      #landing {
+        min-height: 80dvh;                          /* When viewing landing section, take up 80% of the screen estate dynimically */
+        display: flex;
+        justify-content: center;                    /* Align content center horizontally */
+        align-items: center;                        /* Align content center vertically*/
+        text-align: center;                         /* Align all text center */
+        background-color: var(--light-bg-color);    
+        border-radius: 0 0 2rem 2rem;               /* tl, tr, bl, br */
+      }
+
+      .landing-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1.25rem;
+      }
+
+         .profile-pic-large {
+
+        width: 9.375rem; /* Converted from 150px */
+
+        height: 9.375rem; /* Converted from 150px */
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        border: 0.25rem solid var(--primary-color); /* Converted from 4px */
+
+        margin-bottom: 0.625rem; /* Converted from 10px */
+
+      }
+ 
+
+
+   .landing-content h1{
+        font-size: 3.75rem;
+        font-weight: 700;
+      }
+
+      .landing-content p{
+        font-size: 1.2 rem;
+        color: ;var(--secondary-color);
+        margin-bottom: 1.25rem;
+
+ .cta-group a{
+        display: inline-block;
+        padding: 0.625rem 1.5625rem;
+        margin: 0 0.625rem;
+        background-color: var(--accent-color);
+        color: var(--white);
+        border-radius: var(--border-radius);
+        text-decoration: var--border-radius;
+        border: 0.25rem solid var(--primary-color);
+        font-weight: 600;
+        transition: all var(--transition-speed);
+
+        .primary-cta{
+          background-color: var(--primart-color);
+          color: var(--white);
+
+          primary-cta:hover{
+            background-color: #388e3c; /* Darker green on hover */
+            border-color: var(--accent-color);
+            box-shadow: 0 0.25rem 0.5rem rgb(0, 0, 0, 0.2);
+
+               .secondary-cta {
+        background-color: var(--white);
+        color: var(--primary-color);
+      }
+
+      .secondary-cta:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+          }
+
+      }
+
+
     </style>
   </head>
 
   <body>
     <!-- ! Start of nav (Main Navigation) -->
-    <nav> <a href="#landing">|</a> </nav>
-    <nav> <a href="#about">|</a> </nav>
-    <nav> <a href="#experience">|</a> </nav>
-    <nav> <a href="#projects">|</a> </nav>
-    <nav> <a href="#contracts">|</a> </nav>
+    <nav>
+      <a href="#landing">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contacts">Contact</a>
+    </nav>
     <!-- ! End of nav (Main Navigation) -->
 
     <!-- ! Start of Landing section -->
-    <section id="landing">
-      <div>
-        <h1>Danial</h1>
-        <p>Full stack developer</p>
-        <div class="divider"></div>
-        <p>hello i &apos;</p>
-        <!-- call to action -->
-        <a class="cta" href="#projects">View Projects</a>
+    <section id="landing" class="section-padding">
+      <div class="landing-content">
+        <!-- Create a placeholder for profile image -->
+        <img
+          src="https://placehold.co/200x200/000000/FFFFFF?text=ML"
+          alt="Profile Picture Placeholder"
+          class ="profile-pic-large"
+        />
+        <!-- Name and Designation -->
+        <p>Hello, I&apos;m</p>
+        <h1>Danial Zac</h1>
+        <p>Jr Fullstack Developer | Mid-career Professional</p>
+        <div>
+          <a href="#contact">Contact Me</a>
+          <a href="#">Download CV</a>
+        </div>
       </div>
     </section>
     <!-- ! End of Landing section -->
 
     <!-- ! Start of About Me section -->
-    <section id="about">
+    <section class="section-padding">
+      <!-- Top section -->
       <h2>About Me</h2>
-      <p> SOFTWARE DEVELOPER </p>
+
+      <!-- Bottom section -->
+      <div>
+        <div>
+          <img
+            src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait"
+            alt="Placeholder image for Portrait"
+          />
+        </div>
+
+        <div>
+          <h3>"Passion in Technology and Business"</h3>
+          <p>
+            yum yum, dolor sit amet consectetur adipisicing elit. Amet
+            excepturi aut eos aperiam quasi. Animi officiis eaque ipsum
+            excepturi saepe.
+          </p>
+        </div>
+
+        <div>
+          <div>
+            <h4>Banking and Technology</h4>
+            <p>Jr Full stack developer</p>
+          </div>
+          <div>
+            <h4> Trained in Technology and Business</h4>
+            <p>Education</p>
+          </div>
+        </div>
+
+        <p>
+          <!-- Personal quote -->
+        </p>
+      </div>
     </section>
     <!-- ! End of About Me section -->
 
     <!-- ! Start of Experience section -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Banking</p>
-    </section>
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Experience section -->
 
     <!-- ! Start of Projects section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>List a few projects and what you built.</p>
-    </section>
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Projects section -->
 
-    <!-- ! Start of Contact(s) section -->
-    <section id="contracts">
-      <h2>Contracts</h2>
-      <p>Optional: describe freelance/contract work here.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
+    <!-- ! Start of Contact section -->
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Contact section -->
 
     <!-- ! Start of Footer -->
-    <footer>
-      © 2025 Your Name — All rights reserved.
-    </footer>
+    <!-- Insert HTML syntax here -->
     <!-- ! End of Footer -->
   </body>
 </html>
-    
