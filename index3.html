@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Danial</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --bar: #112327;
+        --accent: #3525eb;/* touch of blue for accents */
+        --light-bg-color:var(--bg);  
+        --border-radius: 0.5rem;    
+        --transition-speed: 0.3s
+        font-size:100%:  /*  Default font size of 16px === 1 rem === 100% */
+      font-family: 'Inter', sans-serif;
+
+      }
+
+      * {
+        
+      }
+
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: ''Lato,"'serif';
+        background-color: var(--white);
+        color: var(--text);/*what is affected when this property is applied? */
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+
+      /* Reusable components */
+      /* Class selector */
+      .section-padding {
+        padding: 5rem 1.25rem;   /* 80px top and bottom, 20px left and right */
+        max-width: 75rem;  /* 1200px */
+      }
+
+      /* Navigation Bar */
+      nav {
+        background: var(--bar);
+        padding: 10px 14px;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      section {
+        padding: 48px 16px;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #landing {
+        background: #f3f4f6;
+        border-radius: 8px;
+        padding: 60px 16px;
+      }
+
+      #landing img {
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 10px;
+      }
+
+      p {
+        margin: 0 0 10px;
+        color: var(--muted);
+      }
+
+      .cta {
+        display: inline-block;
+        padding: 10px 16px;
+        margin: 6px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .cta:hover {
+        background: #1e40af;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 16px;
+        background: #111827;
+        color: #d1d5db;
+      }
+
+      .divider {
+        height: 1px;
+        background: #e5e7eb;
+        margin: 20px auto;
+        width: 80%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="#landing">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Landing Section -->
+    <section id="landing">
+      <div>
+        <img
+          src="https://placehold.co/200x200/000000/FFFFFF?text=ML"
+          alt="Profile Picture Placeholder"
+        />
+        <p>Hello, I&apos;m</p>
+        <h1>Danial</h1>
+        <p>Jr Fullstack Developer | Mid-career Professional</p>
+
+        <div>
+          <a class="cta" href="#contact">Contact Me</a>
+          <a class="cta" href="#">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Software Developer with a passion for modern web applications.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Banking and financial technology projects.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are some of my key projects demonstrating front-end and back-end development.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">danialzac@gmail.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>© 2025 Danial — All rights reserved.</footer>
+  </body>
+</html>
+

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Danial</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* === ROOT VARIABLES === */
+      :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #6b7280;
+        --accent-color: #4caf50; /* green accent like 2nd version */
+        --light-bg-color: #f8f9fa;
+        --white: #ffffff;
+        --border-radius: 0.5rem;
+        --transition-speed: 0.3s;
+        font-size: 100%;
+      }
+
+      /* === GLOBAL STYLES === */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        line-height: 1.6;
+        color: var(--primary-color);
+        background-color: var(--white);
+        scroll-behavior: smooth;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3.75rem;
+        color: var(--primary-color);
+      }
+
+      .section-padding {
+        padding: 5rem 1.25rem;
+        max-width: 75rem;
+        margin: 0 auto;
+      }
+
+      /* === NAVIGATION === */
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.9375rem 1.25rem;
+        background-color: var(--white);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav a {
+        margin: 0 0.9375rem;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        transition: color var(--transition-speed);
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      /* === LANDING SECTION === */
+      #landing {
+        min-height: 80dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--light-bg-color);
+        border-radius: 0 0 2rem 2rem;
+      }
+
+      .landing-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 2.5rem;
+      }
+
+      .landing-content img {
+        width: 9.375rem;
+        height: 9.375rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 0.25rem solid var(--primary-color);
+        margin-bottom: 0.625rem;
+      }
+
+      .landing-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+      }
+
+      .landing-content p {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+        margin-bottom: 1.25rem;
+      }
+
+      .cta-group a {
+        display: inline-block;
+        padding: 0.625rem 1.5625rem;
+        margin: 0 0.625rem;
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        transition: all var(--transition-speed);
+        border: 0.125rem solid var(--primary-color);
+      }
+
+      .primary-cta {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      .primary-cta:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .secondary-cta {
+        background-color: var(--white);
+        color: var(--primary-color);
+      }
+
+      .secondary-cta:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      /* === ABOUT SECTION === */
+      #about {
+        background-color: var(--white);
+      }
+
+      .about-grid {
+        display: flex;
+        gap: 2.5rem;
+        align-items: flex-start;
+      }
+
+      .about-image {
+        flex: 1;
+        text-align: center;
+      }
+
+      .about-image img {
+        width: 100%;
+        max-width: 18.75rem;
+        border-radius: var(--border-radius);
+      }
+
+      .about-text {
+        flex: 2;
+      }
+
+      .about-text h3 {
+        font-size: 1.8rem;
+        font-weight: lighter;
+        font-style: italic;
+        margin-bottom: 0.9375rem;
+      }
+
+      .info-card-container {
+        display: flex;
+        gap: 1.25rem;
+        margin: 1.5625rem 0;
+      }
+
+      .info-card {
+        flex: 1;
+        padding: 1.25rem;
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        text-align: center;
+        background-color: var(--light-bg-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .info-card h4 {
+        font-size: 1.2rem;
+        color: var(--accent-color);
+        margin-bottom: 0.3125rem;
+      }
+
+      /*TODO -fix responsive layout for experience-container */
+    
+      /*TODO -fix responsive layout for skills-;ost li */
+
+      /*TODO -fix responsive layout for project grid */
+
+      /*TODO -fix responsive layout for project card*/
+      x`
+
+      /* === EXPERIENCE === */
+      #experience {
+        background-color: var(--light-bg-color);
+      }
+
+      .experience-container {
+        display: flex;
+        gap: 2.5rem;
+        justify-content: center;
+      }
+
+      .experience-card {
+        flex: 1;
+        min-width: 18.75rem;
+        padding: 1.875rem;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+
+      .experience-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1.5625rem;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.625rem;
+        display: inline-block;
+      }
+
+      /* === PROJECTS === */
+      #projects {
+        background-color: var(--white);
+      }
+
+      .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.875rem;
+        justify-content: center;
+      }
+
+      .project-card {
+        flex-basis: calc(33.333% - 1.25rem);
+        min-width: 17.5rem;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform var(--transition-speed);
+        border: 1px solid rgba((0,0,0,0), green, blue, alpha)
+
+      }
+
+      .project-card .project-image {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        object-fit: cover;
+        background-image: (https://placehold.co/100x100/orange/white?text=Image Placeholder)
+
+      }
+  
+
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 12.5rem;
+        background-color: var(--light-bg-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary-color);
+        font-size: 1.5rem;
+      }
+
+      .project-details {
+        padding: 1.25rem;
+      }
+
+      .project-details h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.625rem;
+      }
+
+      .project-details p {
+        color: var(--secondary-color);
+        margin-bottom: 0.9375rem;
+      }
+
+      .project-links a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+
+      /* === CONTACT === */
+      #contact {
+        text-align: center;
+        background-color: var(--light-bg-color);
+      }
+
+      #contact p {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+        margin-bottom: 1.875rem;
+      }
+
+      .contact-links a {
+        display: inline-block;
+        margin: 0 0.9375rem;
+        border: 2px solid var(--primary-color);
+        border-radius: var(--border-radius);
+        padding: 0.75rem 1.5625rem;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        transition: all var(--transition-speed);
+      }
+
+      .contact-links a:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      /* === FOOTER === */
+      footer {
+        text-align: center;
+        padding: 1.25rem;
+        border-top: 1px solid #eee;
+        background-color: var(--white);
+        color: var(--secondary-color);
+      }
+
+      /* === RESPONSIVE === */
+      @media (max-width: 900px) {
+        h2 {
+          font-size: 2rem;
+        }
+
+        .about-grid {
+          flex-direction: column;
+        }
+
+        .info-card-container {
+          flex-direction: column;
+        }
+
+        .experience-container {
+          flex-direction: column;
+        }
+
+        .project-card {
+          flex-basis: 100%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          flex-wrap: wrap;
+        }
+
+        .landing-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .cta-group {
+          flex-direction: column;
+          gap: 0.625rem;
+          border: 1px solid black
+        }
+
+        .cta-group a {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      */ todo - add media query for ".contact-links */
+
+
+      */ apply styles here if the screen is  <= 900px */
+      
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <a href="#landing">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- LANDING -->
+    <section id="landing">
+      <div class="landing-content">
+        <img
+          src="https://placehold.co/200x200/000000/FFFFFF?text=DR"
+          alt="Profile Picture"
+        />
+        <p>Hello, I&apos;m</p>
+        <h1>Danial</h1>
+        <p>Jr Fullstack Developer | Mid-career Professional</p>
+        <div class="cta-group">
+          <a href="#contact" class="secondary-cta">Contact Me</a>
+          <a href="#" class="primary-cta">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-padding">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-image">
+          <img
+            src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait"
+            alt="Danial Portrait"
+          />
+        </div>
+        <div class="about-text">
+          <h3>"From Testing to Building — Crafting Reliable Software"</h3>
+          <p>
+            I started out testing complex banking systems and learning how great
+            software behaves. Today, I build it. As a full-stack developer, I
+            focus on creating responsive, reliable, and scalable applications
+            backed by a deep understanding of quality and detail.
+          </p>
+
+          <div class="info-card-container">
+            <div class="info-card">
+              <h4>5+ Years</h4>
+              <p>Quality Assurance </p>
+            </div>
+            <div class="info-card">
+              <h4>Fullstack Developer</h4>
+              <p>Career Transition</p>
+            </div>
+          </div>
+          
+
+          <p>
+            I’m passionate about clean, maintainable code and continue to expand
+            my skills in front-end frameworks and backend architectures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-padding">
+      <h2>Experience</h2>
+      <div class="experience-container">
+        <div class="experience-card">
+          <h3>Tech Stack</h3>
+          <p>HTML5, CSS3, JavaScript (ES6+), React, Node.js</p>
+        </div>
+        <div class="experience-card">
+          <h3>Tools</h3>
+          <p>Git, VS Code, Postman</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-padding">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">Project 1</div>
+          <div class="project-details">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio showcasing my projects and skills.</p>
+            <div class="project-links">
+              <a href="#">Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">Project 2</div>
+          <div class="project-details">
+            <h3>Task Tracker</h3>
+            <p>
+              A simple to-do list app with local storage and filtering features.
+            </p>
+            <div class="project-links">
+              <a href="#">Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-padding">
+      <h2>Contact</h2>
+      <p>Let's connect and build something awesome.</p>
+      <div class="contact-links">
+        <a href="mailto:danialzac@gmail.com">📧 Email Me</a>
+        <a href="https://linkedin.com">🔗 LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 Danial — All rights reserved.</p>
+    </footer>
+  </body>
+</html>

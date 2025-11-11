@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Danial</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* === ROOT VARIABLES === */
+      :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #6b7280;
+        --accent-color: #2563eb; /* blue accent */
+        --light-bg-color: #f9fafb;
+        --white: #ffffff;
+        --border-radius: 0.5rem;
+        --transition-speed: 0.3s;
+        font-size: 100%;
+      }
+
+      /* === GLOBAL STYLES === */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        line-height: 1.6;
+        color: var(--primary-color);
+        background-color: var(--white);
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      p {
+        color: var(--secondary-color);
+      }
+
+      .section-padding {
+        padding: 5rem 1.25rem;
+        max-width: 75rem;
+        margin: 0 auto;
+      }
+
+      /* === NAVIGATION BAR === */
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 1rem;
+      }
+
+      /* Descendent Selector */
+      nav a {
+        margin: 0 0.9375rem;
+        text-decoration: none; 
+        color: var(--primary-color);
+        font-weight: 600;
+        transition: color var(--transition-speed);
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      /* === LANDING SECTION === */
+      /* ID Selector */
+      #landing {
+        min-height: 80dvh; /* when viewing landing section, 80% of the viewport screen estate height dynamically */
+        display: flex;
+        justify-content: center; /*allign content centre horizontally */
+        align-items: center; /* allign content centre vertically */
+        text-align: center;    /* allign all text center , center text inside the div */
+        background-color: var(--light-bg-color);
+        border-radius: 0 0 2rem 2rem; /* rounded bottom corners */
+      }
+
+      .landing-content {
+        background-color:  #6c757d33; /* semi-transparent background */
+        display: flex; /* use flexbox for layout */
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem; /* space between elements */
+        padding: 1.25rem;
+      }
+
+      .landing-content img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--primary-color);
+      }
+
+      .landing-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      .landing-content p {
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+      }
+
+      .cta-group a {
+        display: inline-block;
+        padding: 0.625rem 1.5625rem;
+        margin: 0.5rem;
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        transition: all var(--transition-speed);
+        border: 2px solid var(--primary-color);
+      }
+
+      .primary-cta {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      .primary-cta:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .secondary-cta {
+        background-color: var(--white);
+        color: var(--primary-color);
+      }
+
+      .secondary-cta:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+
+      /* === ABOUT SECTION === */
+      #about {
+        background-color: var(--white);
+      }
+
+      .about-text {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* === EXPERIENCE SECTION === */
+      #experience {
+        background-color: var(--light-bg-color);
+      }
+
+      .experience-container {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .experience-card {
+        flex: 1 1 280px;
+        background: var(--white);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .experience-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        border-bottom: 2px solid var(--accent-color);
+        display: inline-block;
+        padding-bottom: 0.5rem;
+      }
+
+      /* === PROJECTS SECTION === */
+      #projects {
+        background-color: var(--white);
+      }
+
+      .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+
+      .project-card {
+        flex-basis: calc(33.333% - 1rem);
+        min-width: 280px;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform var(--transition-speed);
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        background-color: var(--light-bg-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+      }
+
+      .project-details {
+        padding: 1.25rem;
+      }
+
+      .project-details h3 {
+        margin-bottom: 0.625rem;
+      }
+
+      .project-links a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+
+      /* === CONTACT SECTION === */
+      #contact {
+        text-align: center;
+        background-color: var(--light-bg-color);
+      }
+
+      #contact p {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+
+      /* === FOOTER === */
+      footer {
+        text-align: center;
+        padding: 1.25rem;
+        background-color: var(--white);
+        border-top: 1px solid #eee;
+        color: var(--secondary-color);
+      }
+
+      /* === RESPONSIVE === */
+      @media (max-width: 37.5rem) { /* applyed for screens 600px and below */
+        .project-card {
+          flex-wrap: wrap
+        }
+
+        /* change the font size for h2  */
+        h2 {
+          font-size: 2rem;  
+        }
+        */another media query that manages <= 900px screen sizes */
+        @media(max-width: 52.56rem) { /* applied for screens 840px and below */
+
+        .landing-content h1 {
+          font-size: 2.2rem;
+        }
+
+        nav {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <a href="#landing">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- LANDING -->
+    <section id="landing">
+      <div class="landing-content">
+        <img
+          src="https://placehold.co/200x200/000000/FFFFFF?text=ML"
+          alt="Profile Picture Placeholder"
+        />
+        <p>Hello, I&apos;m</p>
+        <h1>Danial</h1>
+        <p>Jr Fullstack Developer | Mid-career Professional</p>
+        <div class="cta-group">
+          <a href="#contact" class="secondary-cta">Contact Me</a>
+          <a href="#" class="primary-cta">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-padding">
+      <h2>About Me</h2>
+      <div class="about-text">
+        <p>
+          I started out testing complex banking systems and learning how great software behaves. Today, I build it. As a full-stack developer, I focus on creating responsive, reliable, and scalable applications backed by a deep understanding of quality and detail.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section-padding">
+      <h2>Experience</h2>
+      <div class="experience-container">
+        <div class="experience-card">
+          <h3>Tech Stack</h3>
+          <p>HTML5, CSS3, JavaScript (ES6+), React, Node.js</p>
+        </div>
+        <div class="experience-card">
+          <h3>Tools</h3>
+          <p>Git, VS Code, Postman</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section-padding">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">Project 1</div>
+          <div class="project-details">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio showcasing my projects and skills.</p>
+            <div class="project-links">
+              <a href="#">Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">Project 2</div>
+          <div class="project-details">
+            <h3>Task Tracker</h3>
+            <p>A simple to-do list app with local storage and filtering features.</p>
+            <div class="project-links">
+              <a href="#">Demo</a>
+              <a href="#">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-padding">
+      <h2>Contact</h2>
+      <p>Let's connect and build something awesome.</p>
+      <p>Email: <a href="mailto:danialzac@gmail.com">danialzac@gmail.com</a></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>© 2025 Danial — All rights reserved.</footer>
+  </body>
+</html>
+
+
